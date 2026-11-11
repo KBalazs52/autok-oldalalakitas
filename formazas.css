@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas:
+    "h h"
+    "n n"
+    "ar as"
+    "f f";
+}
+
+header {
+  grid-area: h;
+  color: forestgreen;
+}
+
+nav {
+  grid-area: n;
+  background-color: darkgreen;
+  color: forestgreen;
+  border-radius: 5px;
+}
+
+nav a {
+  
+  color: forestgreen;
+}
+
+article {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-area: ar;
+}
+
+aside {
+  grid-area: as;
+  background-color: brown;
+}
+
+footer {
+  grid-area: f;
+  background-color: wheat;
+}
+
+img {
+  width: 100%;
+}
+
+div {
+    border: 1px gray solid;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+@media screen and (max-width: 800px) {
+  main {
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+      "h"
+      "n"
+      "ar"
+      "as"
+      "f";
+  }
+}
